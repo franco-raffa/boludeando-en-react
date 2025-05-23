@@ -1,5 +1,6 @@
 import "./App.css";
 import CORE_DATA from "./assets/data";
+import ItemCard from "./components/ItemCard";
 
 function App() {
   return (
@@ -7,12 +8,7 @@ function App() {
       <h1>Data Display</h1>
       <div className="container">
         {CORE_DATA.map((item) => (
-          <div className="item" key={item.id}>
-            <div>
-              <h2>{item.name}</h2>
-              <p>Age: {item.age}</p>
-            </div>
-          </div>
+          <ItemCard item={item} />
         ))}
       </div>
     </>
