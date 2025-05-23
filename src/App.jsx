@@ -5,13 +5,16 @@ function App() {
   return (
     <>
       <h1>Data Display</h1>
-      <ul>
+      <div className="container">
         {CORE_DATA.map((item) => (
-          <li key={item.id}>
-            {item.name} - {item.age} years old
-          </li>
+          <div className="item" key={item.id}>
+            <div>
+              <h2>{item.name}</h2>
+              <p>Age: {item.age}</p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </>
   );
 }
